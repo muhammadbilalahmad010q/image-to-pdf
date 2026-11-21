@@ -1,0 +1,492 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        #0f0c29,
+        #302b63,
+        #24243e
+    );
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e0ddff;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a78bfa;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+.container h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #d1cfff;
+}
+
+
+/* =========================
+   UPLOAD BOX
+========================= */
+
+.upload-box {
+    padding: 40px 25px;
+    margin: 30px auto;
+
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(15px);
+
+    border: 2px dashed rgba(190, 170, 255, 0.5);
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+.upload-box:hover {
+    border-color: #a78bfa;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.upload-box h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.upload-box p {
+    color: #d1cfff;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+
+/* =========================
+   FILE INPUT
+========================= */
+
+#imageInput {
+    display: block;
+    max-width: 100%;
+    margin: 25px auto;
+    padding: 12px;
+
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#imageInput::file-selector-button {
+    padding: 10px 18px;
+    margin-right: 15px;
+
+    color: white;
+    background: #6c5ce7;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#imageInput::file-selector-button:hover {
+    background: #8b5cf6;
+}
+
+
+/* =========================
+   FILE INFO
+========================= */
+
+.file-info {
+    font-size: 13px !important;
+    color: #bdb5ff !important;
+}
+
+
+/* =========================
+   IMAGE PREVIEW SECTION
+========================= */
+
+.preview-section {
+    margin-top: 40px;
+    padding: 30px 20px;
+
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.preview-section h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+
+/* =========================
+   PREVIEW CONTAINER
+========================= */
+
+.preview-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* =========================
+   IMAGE PREVIEW CARDS
+========================= */
+
+.preview-container img {
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    transition: transform 0.3s ease;
+}
+
+.preview-container img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   PREVIEW CARD (IF USED)
+========================= */
+
+.image-card,
+.preview-item {
+    position: relative;
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+.image-card:hover,
+.preview-item:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   REMOVE IMAGE BUTTON
+========================= */
+
+.remove-btn,
+.preview-container button {
+    margin-top: 12px;
+    padding: 9px 16px;
+
+    color: #ffffff;
+    background: #e74c5b;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.remove-btn:hover,
+.preview-container button:hover {
+    background: #ff334c;
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   CONVERT BUTTON
+========================= */
+
+#convertBtn {
+    margin-top: 35px;
+    padding: 14px 30px;
+
+    color: #ffffff;
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(124, 58, 237, 0.25);
+    transition: 0.3s ease;
+}
+
+#convertBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.45);
+}
+
+#convertBtn:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 35px auto;
+    }
+
+    .container h1 {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .upload-box {
+        padding: 30px 15px;
+    }
+
+    .preview-container img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .container h1 {
+        font-size: 27px;
+    }
+
+    .upload-box h3 {
+        font-size: 21px;
+    }
+
+    .preview-container img {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    #convertBtn {
+        width: 100%;
+    }
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+    margin-top: 80px;
+    padding: 40px 8% 20px;
+    background: rgba(10, 8, 30, 0.85);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 35px;
+}
+
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-brand h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #b9b3d5;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-nav h3 {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #b9b3d5;
+    transition: 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #a78bfa;
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-bottom p {
+    color: #9992bd;
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-bottom span {
+    color: #ff6b81;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .footer {
+        padding: 30px 20px 18px;
+        margin-top: 50px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
